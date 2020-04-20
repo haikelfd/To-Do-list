@@ -87,3 +87,34 @@ form button :hover {
   transform: translateY(8rem) rotate(20deg);
   opacity: 0;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  width: 10rem;
+  cursor: pointer;
+  color: #65b0f6;
+  padding: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: linear-gradient(120deg, #65b0f6, #3134f0);
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.select:hover::after {
+  background: white;
+  color: #65b0f6;
+}
